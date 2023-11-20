@@ -1,0 +1,16 @@
+{{ define "add-film"}}
+<form hx-post="/add-film/" hx-target="#target" hx-swap="beforeend" hx-indicator="#spinner">
+    <div class="mb-2">
+        <label for="file-title">Title</label>
+        <input type="text" id="file-title" name="title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="file-director">Director</label>
+        <input type="text" id="file-director" name="director" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">
+        <span class="visually-hidden htmx-indicator" id="spinner">Loading...</span>
+        Submit
+    </button>
+</form>
+{{ end }}

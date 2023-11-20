@@ -1,0 +1,11 @@
+{{ define "film-list"}}
+<ul class="list-group fs-5 me-5 d-flex flex-nowrap flex-column mb-2" id="target">
+    {{ range .Films }}
+        {{ block "film-list-element" .}}
+            <li class="flex-fill list-group-item bg-primary text-white">
+                {{ .Title }} - {{ .Director }}
+            </li>
+        {{ end }}
+    {{ end }}
+</ul>
+{{ end }}
